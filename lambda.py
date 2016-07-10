@@ -8,5 +8,5 @@ def lambda_handler(event, context):
     print(str(event))
     boto3.client('sns').publish(
         TopicArn='arn:aws:sns:REGION:ACCOUNT_ID:pingonMe',
-        Message='Check pingon.me!\n\n%s'.format(str(event))
+        Message='Check pingon.me!\n\n{0}'.format(str(event))
     )
